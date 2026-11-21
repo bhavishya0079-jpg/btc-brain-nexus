@@ -1,0 +1,1 @@
+export class MarketScanner{constructor(engine){this.engine=engine}scan(markets=[]){if(!Array.isArray(markets))throw Error("Markets must be an array");return markets.map(m=>{try{return{symbol:m.symbol,...this.engine.analyze(m.candles)}}catch(e){return{symbol:m.symbol,signal:"WAIT",reason:e.message}}})}}

@@ -1,0 +1,1 @@
+export class Diagnostics{run(){let storage=false;try{localStorage.setItem("__bbn","1");localStorage.removeItem("__bbn");storage=true}catch{}return{secureContext:isSecureContext,localStorage:storage,notifications:"Notification"in window,brokerConnection:false,realOrderExecution:false}}}

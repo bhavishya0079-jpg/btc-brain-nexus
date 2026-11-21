@@ -1,0 +1,1 @@
+export class PerformanceAnalyzer{analyze(t=[]){const a=t.filter(x=>Number.isFinite(+x.pnl)),n=a.length,w=a.filter(x=>+x.pnl>0).length,l=a.filter(x=>+x.pnl<0).length,sum=a.reduce((s,x)=>s+ +x.pnl,0);return{totalTrades:n,wins:w,losses:l,breakeven:n-w-l,winRate:n?w/n*100:0,lossRate:n?l/n*100:0,totalPnL:sum,averagePnL:n?sum/n:0}}}

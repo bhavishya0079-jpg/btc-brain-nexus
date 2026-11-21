@@ -1,0 +1,1 @@
+export class EventManager{constructor(){this.map=new Map()}on(k,fn){if(!this.map.has(k))this.map.set(k,new Set());this.map.get(k).add(fn);return()=>this.off(k,fn)}off(k,fn){this.map.get(k)?.delete(fn)}emit(k,v){this.map.get(k)?.forEach(fn=>fn(v))}clear(){this.map.clear()}}

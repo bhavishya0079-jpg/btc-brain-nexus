@@ -1,0 +1,1 @@
+export class DataManager{constructor(){this.providers=new Map()}register(n,p){if(!n||typeof p?.getCandles!=="function")throw Error("Invalid provider");this.providers.set(n,p)}async getCandles(n,s,t,l=200){const p=this.providers.get(n);if(!p)throw Error("Unknown provider");return p.getCandles(s,t,l)}getProviders(){return[...this.providers.keys()]}}

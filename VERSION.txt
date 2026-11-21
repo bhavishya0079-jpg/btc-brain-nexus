@@ -1,0 +1,5 @@
+BTC BRAIN NEXUS
+Free-first static release
+Build date: 2026-11-21
+Validation: JavaScript syntax check passed; Node smoke tests passed.
+See README.md and docs/ROADMAP.md for exact working scope and limitations.

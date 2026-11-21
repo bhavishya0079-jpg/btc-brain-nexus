@@ -1,0 +1,1 @@
+export class ErrorHandler{constructor(max=100){this.max=max;this.items=[]}capture(error,context="APP"){const x={message:error?.message||String(error),context,at:new Date().toISOString()};this.items.push(x);if(this.items.length>this.max)this.items.shift();return x}getAll(){return this.items.map(x=>({...x}))}clear(){this.items=[]}}
